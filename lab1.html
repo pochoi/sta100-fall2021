@@ -190,7 +190,7 @@ summary {
 
 <h1 class="title toc-ignore">STA100 Lab1</h1>
 <h4 class="author">Chi Po Choi</h4>
-<h4 class="date">9/29/2021</h4>
+<h4 class="date">9/30/2021</h4>
 
 </div>
 
@@ -211,17 +211,28 @@ summary {
 <ol style="list-style-type: decimal">
 <li><p>Go to <a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a> and download+install <em>R</em> by following instructions corresponding to your operation system (MacOS, Windows or Linux).</p></li>
 <li><p>Go to <a href="https://www.rstudio.com/products/rstudio/" class="uri">https://www.rstudio.com/products/rstudio/</a> and download+install <strong>RStudio Desktop</strong> corresponding to your operation system (MacOS, Windows or Linux).</p></li>
-<li><p>In case the above not working, here are some other/advanced ways to have RStudio ready in your hands: <a href="https://rstudio.cloud">RStudio Cloud</a>, <a href="https://hub.docker.com/r/rocker/rstudio">Rstudio Server Docker</a>, or maybe <a href="https://mybinder.org/">RStudio in Binder</a> <a href="http://mybinder.org/v2/gh/ucdavis-sta-100-spring-2021/polabs/main?urlpath=rstudio"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTA5IiBoZWlnaHQ9IjIwIj48bGluZWFyR3JhZGllbnQgaWQ9ImIiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYmJiIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PC9saW5lYXJHcmFkaWVudD48Y2xpcFBhdGggaWQ9ImEiPjxyZWN0IHdpZHRoPSIxMDkiIGhlaWdodD0iMjAiIGZpbGw9IiNmZmYiIHJ4PSIzIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjYSkiPjxwYXRoIGZpbGw9IiM1NTUiIGQ9Ik0wIDBoNjR2MjBIMHoiLz48cGF0aCBmaWxsPSIjNTc5YWNhIiBkPSJNNjQgMGg0NXYyMEg2NHoiLz48cGF0aCBmaWxsPSJ1cmwoI2IpIiBkPSJNMCAwaDEwOXYyMEgweiIvPjwvZz48ZyBmaWxsPSIjZmZmIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsVmVyZGFuYSxHZW5ldmEsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPjxpbWFnZSB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHg9IjUiIHk9IjMiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBRmtBQUFCWkNBTUFBQUJpMVhpZEFBQUI4bEJNVkVYLy8vOVhtc3JtWllIMW9sSlhtc3Ixb2xKWG1zcm1aWUgxb2xKWG1zcjFvbEpYbXNybVpZSDFvbEwxb2xKWG1zcjFvbEpYbXNybVpZSDFvbEwxb2xKWG1zcm1aWUgxb2xKWG1zcjFvbEwxb2xKWG1zcm1aWUgxb2xMMW9sSlhtc3JtWllIMW9sTDFvbEwwbkZmMW9sSlhtc3JtWllIMW9sSlhtc3E4ZFpiMW9sSlhtc3JtWllIMW9sSlhtc3BYbXNwWG1zcjFvbEwxb2xKWG1zcm1aWUgxb2xKWG1zcjFvbEwxb2xKWG1zcm1aWUgxb2xMMW9sTGVhSVZYbXNybVpZSDFvbEwxb2xMMW9sSlhtc3JtWllIMW9sTG5hMzFYbXNyMW9sSlhtc3Ixb2xKWG1zcm1aWUgxb2xMcW9WcjFvbEpYbXNyMW9sSlhtc3JtWllIMW9sTDFvbEtrZmFQb2JYdnZpR2FiZ2FkWG1zcVRoS3VvZktIbVo0RG9ibnIxb2xKWG1zcjFvbEpYbXNwWG1zcjFvbEpYbXNyZlo0VHVoV24xb2xMMW9sSlhtc3FCaTdYMW9sSlhtc3BabXNsYm1NaGJtc2RlbXNWZmw4Wmdtc05pbThKcGs4RjBtN1I0bTdGNW5MQjZqYmg3amJpRGlyT0VpYk9HbkthTWhxK1BuYUNWZzZxV2c2cWVnS2FmZjZXaG5wS29mS0d0bm9teGVaeTNub0c2ZFppK24zdkNjcFBEY3BQR24zYkxiNC9NYjQ3VWJJclZhNHJZb0dqZGFJYmVhSVhob1dIbVpZSG9iWHZwY0hqcWRIWHJlSExyb1Zyc2ZHL3VoR251aDJid2oySHhrMTd5bDF2em1sanptMWowbmxYMW9sTDNBSlhXQUFBQWJYUlNUbE1BRUJBUUh4OGdJQ0F1TGpBd01EdzlQVUJBUUVwUVVGQlhWMWhnWUdCa2NIQndjWGw4Z0lDQWdvaUlrSkNRbEppY25KMmdvS0NtcUsrd3NMQzR1c0RBd01qUDBORFExTmJXM056ZzRPRGk1KzN2OFBEdzgvVDA5UFgyOXZiMzkvZjUrZnI3Ky96OC9QejkvdjcremN6Q3hnQUFCQzVKUkVGVWVBSE4xdWwzazBVVUJ2Q2IxQ1RWcG1wYWl0QUdTTFNwU3VLQ0xXcGJUS05KRkdsY1NNQUZGNjNpVW1SY2NORzZnTGJ1eGtYVTY2SkFVZWYvOUxTcG1YbnlMcjNUNUFPL3J6bDV6ajEzN3AxMzZCSVN5NDRmS0pYdUdOL2QxOVBVZlllTzY3Wm5xdGYyS0gzM0lkMXBzWG9GZFczMHNQWjFzTXZzMkQwNjBBSHF3czRGSGVKb2pMWnFudzUzY21mdmcrWFI4bUMwT0VqdXhyWEVrWDV5ZGVWSkxWSWxWMGUxMFBYazVrN2RZZUh1N0NqMWorNDl1S2c3dUxVNjF0R0x3MWxxMjd1Z1FZbGNsSEM0Ymd2N1ZRK1RBeWo1WmMvVWpzUHZzMXNkNWNXcnlXT2J0dldUMkVQYTRydG5XVzNKa3BqZ2dFcGJPc1ByN0Y3RXlOZXd0cEJJc2xBN3A0M0hDc253b29YVEVjM1VtUG1DTm41bHJxVEp4eTZuUm1jYXZHWlZ0LzNEYTJwRDVOSHZzT0hKQ3JkYzFHMnIzRElUcFU3eWljN3cvN1J4bmpjMGt0NUdDNGRqaXYyU3ozRmIyaUVaZzQxL2Rkc0ZEb3l1WXJJa21GZWh6MEhSMnRoUGdRcU15UVliMk90QjBXeHNaM0JlRzMrd3BSYjF2emwyVVlCb2c4RmZHaHR0RktqdEFjbG5aWXJSbzlyeUc5dUcvRlpRVTRBRWc4WkU5TGpHTXpUbXFLWFBMbmxXVm5JbFFRVHZ4SmY4aXA3VmdqWmp5VlByancxdGU1b3RNN1JtUDd4bStzSzJHdjlJOEdpKytCUmJFa1I5RUJ3OHpSVWNLeHdwNzN4a2FMaXFRYitrR2R1SlROSEc3MnpjVzlMb0pncVF4cFAzL1RqLy9jM3lCMHRxemFtbDA1LytvckhMa3NWTys5NWtYNy83cWdKdm5qbHJmcjJHZ3N5eDBlb3k5dVB6TjVTUGQ4NmFYZ2dPc0VLVzJQcno3ZHUzVklEMy90enMvc1NSczJ3N292VkhLdGpyWDJwZDdaTWxUeEFZZkJBTDlqaUR3ZkxrcTU1VG03aWZoTWxUR1B5Q0FzN1JGUmhuNDdKbmxjQjlSTTVUOTdBU3VaWEljVk51VURJbmRwRGJkc2ZycXNPcHBlWGw1WStYVktkakZDVGgrekdhVnVqMGQ5enkwNVBQSzNRekJhbXhkd3RUQ3J6eWcvMlJ2ZjJFc3RVam9yZEd3YS9reDltU0pMcjhtTEx0Q1c4SEhHSmMyUjVoUzIxOUlpRjZQblR1c09xY01sNTdnbTBaOGthbktNQVFnMHFTeXVaZm43ekl0c2JHeU85UWxueFkwZUN1RDFYTDJ5cy9Nc3JRaGx0RTdVZzB1Rk96dWZKRkUyUHhCby9ZQXg4WFBQZER3V04wTXJEUllJWkYwbVNNS0NOSGdhSVZGb0JiTm9MSjd0RVFES3hHRjBrY0xRaW1vakNab3B2ME9rTk95V0NDZzlYTVZBaTdBUkp6UWRNMlFVaDBnbUJvempjM1NrZzZkU0JScURHWVNVT3U2NlpnK0kyZk5acy9NMy9mL0dybC9YbnlGMUd3M1ZLQ2V6MFBONUlVZkZMcXZnVU40QzBxTnFZczVZaFBMK2FWWllERTRJcFVrNTdvU0ZuSm00RnlDcXFPRTBqaFkyU015TEZvbzU2enlvNmJlY09TNVVWRGRqN1ZpaDB6cCt0Y01od1JwQmVMeXF0SWpsSktBSVpTYkk4U0dTRjNrMHBBM21SNXRIdXdQRm9hN043cmVvcTJicUNzQWsxSHFDdTV1dkkxbjZKdVJYSStTMU1jbzU0WW1ZVHdjbjZBZWljK2tzc1hpOFhwWEM0VjN0Ny9BRHVUTkthUUpkU2NBQUFBQUVsRlRrU3VRbUNDIi8+PHRleHQgeD0iNDE1IiB5PSIxNTAiIGZpbGw9IiMwMTAxMDEiIGZpbGwtb3BhY2l0eT0iLjMiIHRleHRMZW5ndGg9IjM3MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiPmxhdW5jaDwvdGV4dD48dGV4dCB4PSI0MTUiIHk9IjE0MCIgdGV4dExlbmd0aD0iMzcwIiB0cmFuc2Zvcm09InNjYWxlKC4xKSI+bGF1bmNoPC90ZXh0Pjx0ZXh0IHg9Ijg1NSIgeT0iMTUwIiBmaWxsPSIjMDEwMTAxIiBmaWxsLW9wYWNpdHk9Ii4zIiB0ZXh0TGVuZ3RoPSIzNTAiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIj5iaW5kZXI8L3RleHQ+PHRleHQgeD0iODU1IiB5PSIxNDAiIHRleHRMZW5ndGg9IjM1MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiPmJpbmRlcjwvdGV4dD48L2c+PC9zdmc+" alt="Binder" /></a></p></li>
+<li><p>In case the above not working, here are some other/advanced ways to have RStudio ready in your hands: <a href="https://rstudio.cloud">RStudio Cloud</a>, <a href="https://hub.docker.com/r/rocker/rstudio">Rstudio Server Docker</a>, or maybe <a href="https://mybinder.org/">RStudio in Binder</a> <a href="http://mybinder.org/v2/gh/pochoi/sta100-fall2021/main?urlpath=rstudio"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTA5IiBoZWlnaHQ9IjIwIj48bGluZWFyR3JhZGllbnQgaWQ9ImIiIHgyPSIwIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYmJiIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLW9wYWNpdHk9Ii4xIi8+PC9saW5lYXJHcmFkaWVudD48Y2xpcFBhdGggaWQ9ImEiPjxyZWN0IHdpZHRoPSIxMDkiIGhlaWdodD0iMjAiIGZpbGw9IiNmZmYiIHJ4PSIzIi8+PC9jbGlwUGF0aD48ZyBjbGlwLXBhdGg9InVybCgjYSkiPjxwYXRoIGZpbGw9IiM1NTUiIGQ9Ik0wIDBoNjR2MjBIMHoiLz48cGF0aCBmaWxsPSIjNTc5YWNhIiBkPSJNNjQgMGg0NXYyMEg2NHoiLz48cGF0aCBmaWxsPSJ1cmwoI2IpIiBkPSJNMCAwaDEwOXYyMEgweiIvPjwvZz48ZyBmaWxsPSIjZmZmIiBmb250LWZhbWlseT0iRGVqYVZ1IFNhbnMsVmVyZGFuYSxHZW5ldmEsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPjxpbWFnZSB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHg9IjUiIHk9IjMiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBRmtBQUFCWkNBTUFBQUJpMVhpZEFBQUI4bEJNVkVYLy8vOVhtc3JtWllIMW9sSlhtc3Ixb2xKWG1zcm1aWUgxb2xKWG1zcjFvbEpYbXNybVpZSDFvbEwxb2xKWG1zcjFvbEpYbXNybVpZSDFvbEwxb2xKWG1zcm1aWUgxb2xKWG1zcjFvbEwxb2xKWG1zcm1aWUgxb2xMMW9sSlhtc3JtWllIMW9sTDFvbEwwbkZmMW9sSlhtc3JtWllIMW9sSlhtc3E4ZFpiMW9sSlhtc3JtWllIMW9sSlhtc3BYbXNwWG1zcjFvbEwxb2xKWG1zcm1aWUgxb2xKWG1zcjFvbEwxb2xKWG1zcm1aWUgxb2xMMW9sTGVhSVZYbXNybVpZSDFvbEwxb2xMMW9sSlhtc3JtWllIMW9sTG5hMzFYbXNyMW9sSlhtc3Ixb2xKWG1zcm1aWUgxb2xMcW9WcjFvbEpYbXNyMW9sSlhtc3JtWllIMW9sTDFvbEtrZmFQb2JYdnZpR2FiZ2FkWG1zcVRoS3VvZktIbVo0RG9ibnIxb2xKWG1zcjFvbEpYbXNwWG1zcjFvbEpYbXNyZlo0VHVoV24xb2xMMW9sSlhtc3FCaTdYMW9sSlhtc3BabXNsYm1NaGJtc2RlbXNWZmw4Wmdtc05pbThKcGs4RjBtN1I0bTdGNW5MQjZqYmg3amJpRGlyT0VpYk9HbkthTWhxK1BuYUNWZzZxV2c2cWVnS2FmZjZXaG5wS29mS0d0bm9teGVaeTNub0c2ZFppK24zdkNjcFBEY3BQR24zYkxiNC9NYjQ3VWJJclZhNHJZb0dqZGFJYmVhSVhob1dIbVpZSG9iWHZwY0hqcWRIWHJlSExyb1Zyc2ZHL3VoR251aDJid2oySHhrMTd5bDF2em1sanptMWowbmxYMW9sTDNBSlhXQUFBQWJYUlNUbE1BRUJBUUh4OGdJQ0F1TGpBd01EdzlQVUJBUUVwUVVGQlhWMWhnWUdCa2NIQndjWGw4Z0lDQWdvaUlrSkNRbEppY25KMmdvS0NtcUsrd3NMQzR1c0RBd01qUDBORFExTmJXM056ZzRPRGk1KzN2OFBEdzgvVDA5UFgyOXZiMzkvZjUrZnI3Ky96OC9QejkvdjcremN6Q3hnQUFCQzVKUkVGVWVBSE4xdWwzazBVVUJ2Q2IxQ1RWcG1wYWl0QUdTTFNwU3VLQ0xXcGJUS05KRkdsY1NNQUZGNjNpVW1SY2NORzZnTGJ1eGtYVTY2SkFVZWYvOUxTcG1YbnlMcjNUNUFPL3J6bDV6ajEzN3AxMzZCSVN5NDRmS0pYdUdOL2QxOVBVZlllTzY3Wm5xdGYyS0gzM0lkMXBzWG9GZFczMHNQWjFzTXZzMkQwNjBBSHF3czRGSGVKb2pMWnFudzUzY21mdmcrWFI4bUMwT0VqdXhyWEVrWDV5ZGVWSkxWSWxWMGUxMFBYazVrN2RZZUh1N0NqMWorNDl1S2c3dUxVNjF0R0x3MWxxMjd1Z1FZbGNsSEM0Ymd2N1ZRK1RBeWo1WmMvVWpzUHZzMXNkNWNXcnlXT2J0dldUMkVQYTRydG5XVzNKa3BqZ2dFcGJPc1ByN0Y3RXlOZXd0cEJJc2xBN3A0M0hDc253b29YVEVjM1VtUG1DTm41bHJxVEp4eTZuUm1jYXZHWlZ0LzNEYTJwRDVOSHZzT0hKQ3JkYzFHMnIzRElUcFU3eWljN3cvN1J4bmpjMGt0NUdDNGRqaXYyU3ozRmIyaUVaZzQxL2Rkc0ZEb3l1WXJJa21GZWh6MEhSMnRoUGdRcU15UVliMk90QjBXeHNaM0JlRzMrd3BSYjF2emwyVVlCb2c4RmZHaHR0RktqdEFjbG5aWXJSbzlyeUc5dUcvRlpRVTRBRWc4WkU5TGpHTXpUbXFLWFBMbmxXVm5JbFFRVHZ4SmY4aXA3VmdqWmp5VlByancxdGU1b3RNN1JtUDd4bStzSzJHdjlJOEdpKytCUmJFa1I5RUJ3OHpSVWNLeHdwNzN4a2FMaXFRYitrR2R1SlROSEc3MnpjVzlMb0pncVF4cFAzL1RqLy9jM3lCMHRxemFtbDA1LytvckhMa3NWTys5NWtYNy83cWdKdm5qbHJmcjJHZ3N5eDBlb3k5dVB6TjVTUGQ4NmFYZ2dPc0VLVzJQcno3ZHUzVklEMy90enMvc1NSczJ3N292VkhLdGpyWDJwZDdaTWxUeEFZZkJBTDlqaUR3ZkxrcTU1VG03aWZoTWxUR1B5Q0FzN1JGUmhuNDdKbmxjQjlSTTVUOTdBU3VaWEljVk51VURJbmRwRGJkc2ZycXNPcHBlWGw1WStYVktkakZDVGgrekdhVnVqMGQ5enkwNVBQSzNRekJhbXhkd3RUQ3J6eWcvMlJ2ZjJFc3RVam9yZEd3YS9reDltU0pMcjhtTEx0Q1c4SEhHSmMyUjVoUzIxOUlpRjZQblR1c09xY01sNTdnbTBaOGthbktNQVFnMHFTeXVaZm43ekl0c2JHeU85UWxueFkwZUN1RDFYTDJ5cy9Nc3JRaGx0RTdVZzB1Rk96dWZKRkUyUHhCby9ZQXg4WFBQZER3V04wTXJEUllJWkYwbVNNS0NOSGdhSVZGb0JiTm9MSjd0RVFES3hHRjBrY0xRaW1vakNab3B2ME9rTk95V0NDZzlYTVZBaTdBUkp6UWRNMlFVaDBnbUJvempjM1NrZzZkU0JScURHWVNVT3U2NlpnK0kyZk5acy9NMy9mL0dybC9YbnlGMUd3M1ZLQ2V6MFBONUlVZkZMcXZnVU40QzBxTnFZczVZaFBMK2FWWllERTRJcFVrNTdvU0ZuSm00RnlDcXFPRTBqaFkyU015TEZvbzU2enlvNmJlY09TNVVWRGRqN1ZpaDB6cCt0Y01od1JwQmVMeXF0SWpsSktBSVpTYkk4U0dTRjNrMHBBM21SNXRIdXdQRm9hN043cmVvcTJicUNzQWsxSHFDdTV1dkkxbjZKdVJYSStTMU1jbzU0WW1ZVHdjbjZBZWljK2tzc1hpOFhwWEM0VjN0Ny9BRHVUTkthUUpkU2NBQUFBQUVsRlRrU3VRbUNDIi8+PHRleHQgeD0iNDE1IiB5PSIxNTAiIGZpbGw9IiMwMTAxMDEiIGZpbGwtb3BhY2l0eT0iLjMiIHRleHRMZW5ndGg9IjM3MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiPmxhdW5jaDwvdGV4dD48dGV4dCB4PSI0MTUiIHk9IjE0MCIgdGV4dExlbmd0aD0iMzcwIiB0cmFuc2Zvcm09InNjYWxlKC4xKSI+bGF1bmNoPC90ZXh0Pjx0ZXh0IHg9Ijg1NSIgeT0iMTUwIiBmaWxsPSIjMDEwMTAxIiBmaWxsLW9wYWNpdHk9Ii4zIiB0ZXh0TGVuZ3RoPSIzNTAiIHRyYW5zZm9ybT0ic2NhbGUoLjEpIj5iaW5kZXI8L3RleHQ+PHRleHQgeD0iODU1IiB5PSIxNDAiIHRleHRMZW5ndGg9IjM1MCIgdHJhbnNmb3JtPSJzY2FsZSguMSkiPmJpbmRlcjwvdGV4dD48L2c+PC9zdmc+" alt="Binder" /></a></p></li>
 </ol>
 </div>
 <div id="rmarkdown" class="section level3">
 <h3>RMarkdown</h3>
 <ol style="list-style-type: decimal">
 <li><p>↖ Click <strong>New File</strong> then new <strong>R Markdown</strong>. Click Yes to the pop-up to install all necessary R packages. And proceed to create your first R Markdown file.</p>
-<p>In cases somethings goes wrong, try following <a href="https://bookdown.org/yihui/rmarkdown/installation.html">R Markdown: The Definitive Guide -&gt; Installation</a> to manually install R packages <code>rmarkdown</code> and <code>tinytex</code>.</p></li>
-<li><p>Save and Knit into html and pdf. <img src="data:text/html; charset=utf-8;charset=utf-8,%3C%21DOCTYPE%20html%3E%0A%3Chtml%20lang%3D%22en%22%3E%0A%3Cmeta%20charset%3D%22utf%2D8%22%3E%0A%3Ctitle%3EWikimedia%20Error%3C%2Ftitle%3E%0A%3Cstyle%3E%0A%2A%20%7B%20margin%3A%200%3B%20padding%3A%200%3B%20%7D%0Abody%20%7B%20background%3A%20%23fff%3B%20font%3A%2015px%2F1%2E6%20sans%2Dserif%3B%20color%3A%20%23333%3B%20%7D%0A%2Econtent%20%7B%20margin%3A%207%25%20auto%200%3B%20padding%3A%202em%201em%201em%3B%20max%2Dwidth%3A%20640px%3B%20%7D%0A%2Efooter%20%7B%20clear%3A%20both%3B%20margin%2Dtop%3A%2014%25%3B%20border%2Dtop%3A%201px%20solid%20%23e5e5e5%3B%20background%3A%20%23f9f9f9%3B%20padding%3A%202em%200%3B%20font%2Dsize%3A%200%2E8em%3B%20text%2Dalign%3A%20center%3B%20%7D%0Aimg%20%7B%20float%3A%20left%3B%20margin%3A%200%202em%202em%200%3B%20%7D%0Aa%20img%20%7B%20border%3A%200%3B%20%7D%0Ah1%20%7B%20margin%2Dtop%3A%201em%3B%20font%2Dsize%3A%201%2E2em%3B%20%7D%0A%2Econtent%2Dtext%20%7B%20overflow%3A%20hidden%3B%20overflow%2Dwrap%3A%20break%2Dword%3B%20word%2Dwrap%3A%20break%2Dword%3B%20%2Dwebkit%2Dhyphens%3A%20auto%3B%20%2Dmoz%2Dhyphens%3A%20auto%3B%20%2Dms%2Dhyphens%3A%20auto%3B%20hyphens%3A%20auto%3B%20%7D%0Ap%20%7B%20margin%3A%200%2E7em%200%201em%200%3B%20%7D%0Aa%20%7B%20color%3A%20%230645ad%3B%20text%2Ddecoration%3A%20none%3B%20%7D%0Aa%3Ahover%20%7B%20text%2Ddecoration%3A%20underline%3B%20%7D%0Acode%20%7B%20font%2Dfamily%3A%20sans%2Dserif%3B%20%7D%0A%2Etext%2Dmuted%20%7B%20color%3A%20%23777%3B%20%7D%0A%3C%2Fstyle%3E%0A%3Cdiv%20class%3D%22content%22%20role%3D%22main%22%3E%0A%3Ca%20href%3D%22https%3A%2F%2Fwww%2Ewikimedia%2Eorg%22%3E%3Cimg%20src%3D%22https%3A%2F%2Fwww%2Ewikimedia%2Eorg%2Fstatic%2Fimages%2Fwmf%2Dlogo%2Epng%22%20srcset%3D%22https%3A%2F%2Fwww%2Ewikimedia%2Eorg%2Fstatic%2Fimages%2Fwmf%2Dlogo%2D2x%2Epng%202x%22%20alt%3D%22Wikimedia%22%20width%3D%22135%22%20height%3D%22101%22%3E%0A%3C%2Fa%3E%0A%3Ch1%3EError%3C%2Fh1%3E%0A%3Cdiv%20class%3D%22content%2Dtext%22%3E%0A%3Cp%3EOur%20servers%20are%20currently%20under%20maintenance%20or%20experiencing%20a%20technical%20problem%2E%0A%0APlease%20%3Ca%20href%3D%22%22%20title%3D%22Reload%20this%20page%22%20onclick%3D%22window%2Elocation%2Ereload%28false%29%3B%20return%20false%22%3Etry%20again%3C%2Fa%3E%20in%20a%20few%26nbsp%3Bminutes%2E%3C%2Fp%3E%0A%0A%3Cp%3ESee%20the%20error%20message%20at%20the%20bottom%20of%20this%20page%20for%20more%26nbsp%3Binformation%2E%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A%3Cdiv%20class%3D%22footer%22%3E%3Cp%3EIf%20you%20report%20this%20error%20to%20the%20Wikimedia%20System%20Administrators%2C%20please%20include%20the%20details%20below%2E%3C%2Fp%3E%3Cp%20class%3D%22text%2Dmuted%22%3E%3Ccode%3ERequest%20from%20168%2E150%2E2%2E84%20via%20cp4021%20cp4021%2C%20Varnish%20XID%20782294482%3Cbr%3EUpstream%20caches%3A%20cp4021%20int%3Cbr%3EError%3A%20403%2C%20Forbidden%2E%20Please%20comply%20with%20the%20User%2DAgent%20policy%3A%20https%3A%2F%2Fmeta%2Ewikimedia%2Eorg%2Fwiki%2FUser%2DAgent%5Fpolicy%20at%20Thu%2C%2030%20Sep%202021%2001%3A36%3A08%20GMT%3C%2Fcode%3E%3C%2Fp%3E%0A%3C%2Fdiv%3E%0A%3C%2Fhtml%3E%0A" style="width:10.0%" alt="Knit" /></p></li>
-<li><p>Get the <code>template.Rmd</code> in <a href="https://canvas.ucdavis.edu/courses/556874/files/folder/templates">Files/templates at STA100 Canvas site</a> . Try to load it into RStudio and Knit into pdf.</p></li>
-<li><p>For more info, visit <a href="https://rmarkdown.rstudio.com/" class="uri">https://rmarkdown.rstudio.com/</a> .</p></li>
+<p>In cases some error messages go around, try following <a href="https://bookdown.org/yihui/rmarkdown/installation.html">R Markdown: The Definitive Guide -&gt; Installation</a> to manually install R packages <code>rmarkdown</code> and <code>tinytex</code>.</p></li>
+<li><p>Save and Knit into html or pdf. You just made your first Rmarkdown documents!</p></li>
+<li><p>Get the R notes prepared by Maxime in <a href="https://piazza.com/ucdavis/fall2021/sta100b/resources">STA100B Piazza Resources</a> . You may try to load <code>.Rmd</code> files into RStudio and Knit into html or pdf. You can verify that the nicely-made pdf notes are generated by corresponding <code>.Rmd</code>.</p></li>
+</ol>
+<ul>
+<li><code>STA-100-R-Handout-Week-1-Summary-Statistics.Rmd</code></li>
+<li><code>STA-100-R-Handout-Week-1-Summary-Statistics.pdf</code></li>
+<li><code>STA-100-R-Handout-Week-2-Graphs.Rmd</code></li>
+<li><code>STA-100-R-Handout-Week-2-Graphs.pdf</code></li>
+<li><code>STA-100-R-Handout-Week-3-QQ-plots.Rmd</code></li>
+<li><code>STA-100-R-Handout-Week-3-QQ-plots.pdf</code></li>
+</ul>
+<p>Find some time to follow the notes to learn some basics.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>For general info about RMarkdown, visit <a href="https://rmarkdown.rstudio.com/" class="uri">https://rmarkdown.rstudio.com/</a> .</li>
 </ol>
 <div id="r-tutorial" class="section level4">
 <h4>R tutorial</h4>
@@ -249,6 +260,132 @@ swirl()</code></pre>
 </ul>
 </div>
 </div>
+</div>
+<div id="quick-start-with-r-and-rstudio" class="section level1">
+<h1>Quick start with R and RStudio</h1>
+<p>Follow the below instructions to make yourself comfortable in using R/RStudio for statistical/scientific computing.</p>
+<div id="scientific-computing" class="section level4">
+<h4>Scientific computing</h4>
+<ul>
+<li><p>In <strong>Console</strong>, type and enter <code>1+1</code> and you will get</p>
+<pre class="r"><code>1+1</code></pre>
+<pre><code>## [1] 2</code></pre></li>
+<li><p>Try <code>2.1*(3.7+4.9)/5.2</code>, <code>sin(pi/3)</code>, <code>exp(0.8)</code>, <code>log(1.0)</code> and anything. You can now throw away your TI-who-cares calculator!</p></li>
+</ul>
+</div>
+<div id="working-directory" class="section level4">
+<h4>Working directory</h4>
+<p>Working directory is the default folder in which files are saved and read.</p>
+<ul>
+<li><p>In the <strong>Files</strong> tab, find/create a folder for your STA100 work. Click <strong>More</strong> then <strong>Set As Working Directory</strong>.</p></li>
+<li><p>Download the <code>patients101.csv</code> in <a href="https://piazza.com/ucdavis/fall2021/sta100b/resources">STA100B Piazza Resources</a> and save it into your working directory. Then, run the codes <code>patients101 = read.csv(&quot;patients101.csv&quot;)</code></p></li>
+<li><p>Click on the Data <code>patients101</code> in Environment tab. You have just loaded your first dataset into RStudio!</p></li>
+</ul>
+</div>
+<div id="r-scripts" class="section level4">
+<h4>R scripts</h4>
+<ul>
+<li><p>Click the “little green plus icon” and select <strong>R Script</strong>. Then you obtain a notebook that for your to put R codes. Type some codes, for example</p>
+<pre class="r"><code>x &lt;- 10.5
+y &lt;- 8.1
+z &lt;- x + y
+print(z)</code></pre>
+<p>Click <strong>Source</strong> to and see the result <code>18.6</code> in <strong>Console</strong>.</p>
+<p>Try computing the average age in the <code>patients101</code> dataset</p>
+<pre class="r"><code>s &lt;- mean(patients101$age)
+print(s)</code></pre></li>
+<li><p>You can also <strong>Run</strong> line by line. Put your cursor to the line your want to run and click <strong>Run</strong>. You can also use hot-key <strong>Command+Enter</strong> in mac (or <strong>Control+Enter</strong> in Windows?).</p></li>
+<li><p>Click the floppy icon to save your R script in your working directory. Usually we save R scripts with file extension <code>.R</code>, for example, <code>discussion1_is_the_best.R</code>. Now you can shut down your computer and go out to enjoy the sunshine! See you all next week!</p></li>
+<li><p>Next week, open your script and work on it again.</p></li>
+</ul>
+</div>
+</div>
+<div id="exercise-in-discussion_01.pdf" class="section level1">
+<h1>Exercise in <code>Discussion_01.pdf</code></h1>
+<p>Get the <code>Discussion_01.pdf</code> prepared by Maxime in <a href="https://piazza.com/ucdavis/fall2021/sta100b/resources">STA100B Piazza Resources</a> .</p>
+<div id="questions" class="section level4">
+<h4>Questions</h4>
+<p>On Piazza, under Datasets, you will find the file <code>patients101.csv</code>. This file has the following columns:</p>
+<pre><code>Column 1: age: The age of the patient.
+Column 2: totalchol: A measure of the patients total cholesterol - the higher the number, the more cholesterol. In units of mg/dL.
+Column 3: sysBP: The patients systolic blood pressure. In units of mm Hg.
+Column 4: weight: The patients weight in units of kg.
+Column 5: height: The patients height in units of cm.
+Column 6: sedmins: The patients number of sedentary minutes per week.
+Column 7: obese: The patients obesity category, with values normal, overweight, obese.
+Column 8: marriage: The patients marriage category, with values other, married, divorced, widowed, nevermarried.
+Column 9: gender: M or F, denoting Male or Female.</code></pre>
+<ol style="list-style-type: lower-alpha">
+<li>Find the average systolic blood pressure of all subjects.</li>
+<li>Find the standard deviation of systolic blood pressure of all subjects.</li>
+<li>Find the average of weight of all subjects.</li>
+<li>Find the average of height of all subjects.</li>
+<li>Find the average of weight by gender.</li>
+<li>Find the standard deviation of height by gender.</li>
+<li>Which marriage category has the most subjects?</li>
+<li>Find the average weight for married and divorced subjects.</li>
+</ol>
+</div>
+<div id="some-answers" class="section level4">
+<h4>Some answers</h4>
+<p>Copy the codes into your script and Run!</p>
+<pre class="r"><code>patients101 = read.csv(&quot;patients101.csv&quot;)</code></pre>
+<pre class="r"><code>mean(patients101$weight)</code></pre>
+<pre><code>## [1] 82.157</code></pre>
+<pre class="r"><code>sd(patients101$weight)</code></pre>
+<pre><code>## [1] 18.35189</code></pre>
+<pre class="r"><code>aggregate(weight ~ marriage, data = patients101, mean)</code></pre>
+<pre><code>##       marriage   weight
+## 1     divorced 81.54167
+## 2      married 81.54423
+## 3 nevermarried 78.89375
+## 4        other 86.82500
+## 5      widowed 86.58750</code></pre>
+<pre class="r"><code>aggregate(height ~ marriage, data = patients101, sd)</code></pre>
+<pre><code>##       marriage    height
+## 1     divorced  8.462336
+## 2      married  9.834175
+## 3 nevermarried  8.692593
+## 4        other  9.659930
+## 5      widowed 11.979357</code></pre>
+<pre class="r"><code>aggregate(height ~ marriage, data = patients101, length)</code></pre>
+<pre><code>##       marriage height
+## 1     divorced     12
+## 2      married     52
+## 3 nevermarried     16
+## 4        other     12
+## 5      widowed      8</code></pre>
+<p>Try to get all the answers by modifying the codes above.</p>
+</div>
+</div>
+<div id="homework-1-r-scripts" class="section level1">
+<h1>Homework 1 R scripts</h1>
+<p>In <code>Homework-01-Help-R.R</code> <a href="https://piazza.com/ucdavis/fall2021/sta100b/resources">STA100B Piazza Resources</a></p>
+<pre class="r"><code>pain.data =  read.csv(&quot;pain.csv&quot;, header = T)
+pain.data
+
+names(pain.data)
+
+pain.data$HairColor
+
+pain.data$Score
+
+hist(pain.data$Score)
+
+#(a) Find the overall mean of pain tolerance, regardless 
+#of hair color
+
+mean(pain.data$Score)
+
+#(b) Find the overall standard deviation of pain tolerance, 
+#regardless of hair color.
+
+sd(pain.data$Score) # standard deviation 
+
+#(c) Find the mean pain tolerance for the category DarkBrunette. 
+#Hint: Use R to find the mean for each group.
+
+aggregate( Score ~ HairColor, data = pain.data, mean)</code></pre>
 </div>
 
 
