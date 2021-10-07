@@ -75,6 +75,6 @@ boxplot(sbp ~ exercise, data=gsk_data, main = "Hi")
 
 plot(gsk_data$stress, main = "Yo")
 
-mosaicplot(~ stress + educatn, data = gsk_data, shade = TRUE)
+mosaicplot(~ stress + educatn, data = gsk_data, color = TRUE)
 ```
 

@@ -204,7 +204,7 @@ summary {
 <ul>
 <li><p>In the <strong>Files</strong> tab, find/create a folder for your STA100 work. Click <strong>More</strong> then <strong>Set As Working Directory</strong>.</p></li>
 <li><p>Download the <code>GSK.csv</code> in <a href="https://piazza.com/ucdavis/fall2021/sta100b/resources">STA100B Piazza Resources</a> and save it into your working directory. Then, run the codes <code>gsk_data = read.csv(&quot;GSK.csv&quot;)</code></p></li>
-<li><p>Click on the Data <code>gsk_data</code> in Environment tab. You have just loaded your first dataset into RStudio!</p></li>
+<li><p>Click on the Data <code>gsk_data</code> in Environment tab.</p></li>
 </ul>
 </div>
 <div id="r-scripts" class="section level4">
@@ -254,7 +254,7 @@ boxplot(sbp ~ exercise, data=gsk_data, main = &quot;Hi&quot;)
 
 plot(gsk_data$stress, main = &quot;Yo&quot;)
 
-mosaicplot(~ stress + educatn, data = gsk_data, shade = TRUE)</code></pre>
+mosaicplot(~ stress + educatn, data = gsk_data, color = TRUE)</code></pre>
 </div>
 </div>
 
