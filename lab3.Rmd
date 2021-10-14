@@ -1,5 +1,5 @@
 ---
-title: "STA100 Lab2"
+title: "STA100 Lab3"
 author: "Chi Po Choi"
 date: "10/14/2021"
 output: html_document
