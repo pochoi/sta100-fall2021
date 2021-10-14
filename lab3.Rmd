@@ -1,0 +1,137 @@
+---
+title: "STA100 Lab2"
+author: "Chi Po Choi"
+date: "10/14/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Exercise in `Discussion_03.pdf`
+
+Get the `Discussion_03.pdf` prepared by Maxime in [STA100B Piazza Resources ](https://piazza.com/ucdavis/fall2021/sta100b/resources) . 
+
+# Quick start with R and RStudio again!
+
+#### Working directory
+
+Working directory is the default folder in which files are saved and read.
+
+- In the **Files** tab, find/create a folder for your STA100 work. Click **More** then click **Set As Working Directory**.
+
+- Download the `ErinsFitbit2016.csv` in [STA100B Piazza Resources ](https://piazza.com/ucdavis/fall2021/sta100b/resources)  and save it into your working directory. Then, run the codes `erins_fitbit = read.csv("ErinsFitbit2016.csv")`
+
+- Click on the Data `erins_fitbit` in Environment tab. You see what is inside `erins_fitbit`.
+
+#### R scripts
+
+- Click the "little green plus icon" and select **R Script**. Then you obtain a notebook that for your to put R codes. Type some codes, for example
+  ```{r, eval=F}
+  erins_fitbit = read.csv("ErinsFitbit2016.csv", stringsAsFactors = TRUE)
+  qqnorm(erins_fitbit$Sleep)
+  qqline(erins_fitbit$Sleep)
+  ```
+
+- You can also **Run** line by line. Put your cursor to the line your want to run and click **Run**. You can also use hot-key **Command+Enter** in mac (or **Control+Enter** in Windows?).
+
+- Click the floppy icon to save your R script in your working directory. Usually we save R scripts with file extension `.R`, for example, `lab3_is_great.R`.
+
+#### Book Problems
+
+Let's work on some the problems during the Lab.
+
+- Q1
+  12:15pm-12:25pm
+
+```{r}
+plot_z_area = function(lower_boundary,
+                       upper_boundary,
+                       my_mean = 0,
+                       my_sd = 1,
+                       my_col = "hotpink",
+                       text_col = "black") {
+  
+  lower_boundary = max(lower_boundary, my_mean-4*my_sd)
+  upper_boundary = min(upper_boundary, my_mean+4*my_sd)
+  x = seq(my_mean-4*my_sd, my_mean+4*my_sd, length=200)
+  y = dnorm(x, mean=my_mean, sd=my_sd)
+  plot(x, y, type="l")
+
+  p_x = seq(lower_boundary, upper_boundary, length=100)
+  p_y = dnorm(p_x, mean=my_mean, sd=my_sd)
+  polygon(c(lower_boundary, p_x, upper_boundary), c(0, p_y, 0), col=my_col)
+
+  p = pnorm(c(lower_boundary, upper_boundary), mean=my_mean, sd=my_sd)
+  text(sum(p_x*p_y)/sum(p_y), mean(y), sprintf("%.4f", p[2]-p[1]),
+       col = text_col, cex = 2)
+}
+
+plot_z_area(70, 100, my_mean = 68, my_sd = 4)
+```
+
+```{r}
+plot_z_area_percentile = function(percentile,
+                       my_mean = 0,
+                       my_sd = 1,
+                       my_col = "hotpink",
+                       text_col = "black") {
+  
+  lower_boundary = -4
+  upper_boundary = qnorm(percentile, mean=my_mean, sd=my_sd)
+  x = seq(my_mean-4*my_sd, my_mean+4*my_sd, length=200)
+  y = dnorm(x, mean=my_mean, sd=my_sd)
+  plot(x, y, type="l")
+
+  p_x = seq(lower_boundary, upper_boundary, length=100)
+  p_y = dnorm(p_x, mean=my_mean, sd=my_sd)
+  polygon(c(lower_boundary, p_x, upper_boundary), c(0, p_y, 0), col=my_col)
+
+  p = pnorm(c(lower_boundary, upper_boundary), mean=my_mean, sd=my_sd)
+  text(upper_boundary+0.5*my_sd, p_y[100]/2, sprintf("%.2f", upper_boundary),
+       col = text_col, cex = 1)
+}
+
+plot_z_area_percentile(0.6, my_mean = 68, my_sd = 4)
+```
+
+
+- Q2
+  12:35pm-12:45pm
+
+####  R Portion
+
+```{r}
+erins_fitbit = read.csv("ErinsFitbit2016.csv")
+
+#R Problem 1, (a)
+qqnorm(erins_fitbit$Sleep)
+qqline(erins_fitbit$Sleep)
+
+#R Problem 1, (b)
+x = erins_fitbit$Sleep
+
+mean_x = mean(x)
+sd_x = sd(x)
+
+mean_x
+
+sd_x
+
+erins_fitbit$flag_inside_1_sd = abs(x - mean_x) < sd_x
+erins_fitbit$flag_inside_2_sd = abs(x - mean_x) < 2*sd_x
+erins_fitbit$flag_inside_3_sd = abs(x - mean_x) < 3*sd_x
+
+knitr::kable(
+  head(erins_fitbit)
+)
+
+sum(erins_fitbit$flag_inside_1_sd)/length(erins_fitbit$flag_inside_1_sd)
+
+mean(erins_fitbit$flag_inside_1_sd)
+
+mean(erins_fitbit$flag_inside_2_sd)
+mean(erins_fitbit$flag_inside_3_sd)
+```
+

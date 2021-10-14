@@ -5,4 +5,5 @@ Launch RStudio with Binder: [![Binder](http://mybinder.org/badge_logo.svg)](http
 
 - [Lab 1](https://pochoi.github.io/sta100-fall2021/lab1.html) 
 - [Lab 2](https://pochoi.github.io/sta100-fall2021/lab2.html) 
+- [Lab 3](https://pochoi.github.io/sta100-fall2021/lab3.html) 
 
