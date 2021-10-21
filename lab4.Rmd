@@ -1,0 +1,15 @@
+---
+title: "STA100 Lab3"
+author: "Chi Po Choi"
+date: "10/22/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Exercise in `Fall-2021-Sample-Exam-I.pdf`
+
+Get the `Fall-2021-Sample-Exam-I.pdf` prepared by Maxime in [STA100B Piazza Resources ](https://piazza.com/ucdavis/fall2021/sta100b/resources) . 
+
