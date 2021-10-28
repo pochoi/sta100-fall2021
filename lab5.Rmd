@@ -1,0 +1,97 @@
+---
+title: "STA100 Lab3"
+author: "Chi Po Choi"
+date: "10/28/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Exercise in `Discussion-05.pdf`
+
+Get the `Discussion-05.pdf` prepared by Maxime in [STA100B Piazza Resources ](https://piazza.com/ucdavis/fall2021/sta100b/resources) . 
+
+#### Lab schedule today
+
+Let's work on some the problems during the Lab.
+
+- Q1
+  12:15pm-12:25pm
+
+- Q2
+  12:35pm-12:45pm
+
+
+#### Hints
+
+- Q1
+  a. Formula: 
+    - $n =$ sample size
+    - $\bar{y} =$ sample mean
+    - $s =$ sample standard deviation
+    - $\alpha =$ significant level
+    - $d =$ degree of freedom of t distribution (it is $d = n-1$ in this case.)
+    - $t_{d, \frac{\alpha}{2}} =$ the $(1-\frac{\alpha}{2})$-quantile of t distribution of degree of freedom $d$.
+$$
+\text{The $(1-\alpha) \times 100 \%$  confident interval of the population mean }
+=
+\left( \,
+\bar{y} - t_{d, \frac{\alpha}{2}} \frac{s}{\sqrt{n}}
+\, , \,
+\bar{y} + t_{d, \frac{\alpha}{2}} \frac{s}{\sqrt{n}}
+\, \right)
+$$
+
+  b.
+    If the number of sleep hours per night of a student follows normal distribution with population mean $\mu$ and population standard deviation $\sigma$, then, for a sample of size $n$ and sample mean $\bar{y}$, there is $(1 -\alpha)$ probability that the confidence interval $\left( \bar{y} - t_{d, \frac{\alpha}{2}} \frac{s}{\sqrt{n}} ,  \bar{y} + t_{d, \frac{\alpha}{2}} \frac{s}{\sqrt{n}}\right)$ covers the population mean $\mu$.
+    
+    Tricky concept: The interval is a random object, but the population is not random. That's why I put "confidence interval" as the subject and "population mean" as the object in the sentence "There is p probability that X covers x".
+
+  c.
+  The length of confidence interval $\left( \bar{y} - t_{d, \frac{\alpha}{2}} \frac{s}{\sqrt{n}} ,  \bar{y} + t_{d, \frac{\alpha}{2}} \frac{s}{\sqrt{n}}\right)$ is $2 t_{d, \frac{\alpha}{2}} \frac{s}{\sqrt{n}}$. Should we solve equation "$0.25 = t_{d, \frac{\alpha}{2}} \frac{s}{\sqrt{n}}$" or equation "$0.25 = 2 t_{d, \frac{\alpha}{2}} \frac{s}{\sqrt{n}}$"?
+
+  d. Since it is a statistics class, we rephrase the question as: We have a hypothesis
+  $$H_0: \mu = 8.0$$
+  Does the experiment sample suppose this hypothesis?
+
+
+- Q2
+  a. Formula
+    - $n_1 =$ sample size of first sample
+    - $n_2 =$ sample size of second sample
+    - $\bar{y}_1 =$ sample mean of first sample
+    - $\bar{y}_2 =$ sample mean of second sample
+    - $s_1 =$ sample standard deviation of first sample
+    - $s_2 =$ sample standard deviation of second sample
+    - $\alpha =$ significant level
+    - $d =$ degree of freedom of t distribution (What value should $d$ take in this case?)
+    - $t_{d, \frac{\alpha}{2}} =$ the $(1-\frac{\alpha}{2})$-quantile of t distribution of degree of freedom $d$.
+$$
+\text{The $(1-\alpha) \times 100 \%$  confident interval of the difference of two population means}
+=
+\left( \,
+\bar{y}_1-\bar{y}_2 - t_{d, \frac{\alpha}{2}} \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
+\, , \,
+\bar{y}_1-\bar{y}_2 + t_{d, \frac{\alpha}{2}} \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
+\, \right)
+$$
+  
+  
+  b. If the weights of female cat of follows normal distribution with population mean $\mu_1$ and population standard deviation $\sigma_1$ and
+   the weights of male cat of follows normal distribution with population mean $\mu_2$ and population standard deviation $\sigma_2$,
+   then, for a sample of female cat weight of size $n_1$ and sample mean $\bar{y}_1$, and for a sample of male cat weight of size $n_2$ and sample mean $\bar{y}_2$, there is $(1 -\alpha)$ probability that the confidence interval $\left(
+\bar{y}_1-\bar{y}_2 - t_{d, \frac{\alpha}{2}} \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
+,
+\bar{y}_1-\bar{y}_2 + t_{d, \frac{\alpha}{2}} \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
+\right)$ covers the difference $\mu_1 - \mu_2$.
+    
+
+  d. Look at
+$$
+t_{d, \frac{\alpha}{2}} \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
+$$
+  
+  
+  
