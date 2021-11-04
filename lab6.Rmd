@@ -1,0 +1,131 @@
+---
+title: "STA100 Lab6"
+author: "Chi Po Choi"
+date: "11/04/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Exercise in `Discussion-06.pdf`
+
+Get the `Discussion-06.pdf` prepared by Maxime in [STA100B Piazza Resources ](https://piazza.com/ucdavis/fall2021/sta100b/resources) . 
+
+#### Lab schedule today
+
+Let's work on some the problems during the Lab.
+
+- Q1
+  12:15pm-12:25pm
+
+- Q2
+  12:35pm-12:45pm
+
+#### Hints
+
+
+- Q1 (Discussion 5 Q2)
+  
+  Two sample t-test
+
+  a. Formula
+    - $n_1 =$ sample size of first sample
+    - $n_2 =$ sample size of second sample
+    - $\bar{y}_1 =$ sample mean of first sample
+    - $\bar{y}_2 =$ sample mean of second sample
+    - $s_1 =$ sample standard deviation of first sample
+    - $s_2 =$ sample standard deviation of second sample
+    - $\alpha =$ significant level
+    - $d =$ degree of freedom of t distribution (What value should $d$ take in this case?)
+    - $t_{d, \frac{\alpha}{2}} =$ the $(1-\frac{\alpha}{2})$-quantile of t distribution of degree of freedom $d$.
+$$
+\text{The $(1-\alpha) \times 100 \%$  confident interval of the difference of two population means}
+=
+\left( \,
+\bar{y}_1-\bar{y}_2 - t_{d, \frac{\alpha}{2}} \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
+\, , \,
+\bar{y}_1-\bar{y}_2 + t_{d, \frac{\alpha}{2}} \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
+\, \right)
+$$
+  
+  
+  b. If the weights of female cat of follows normal distribution with population mean $\mu_1$ and population standard deviation $\sigma_1$ and
+   the weights of male cat of follows normal distribution with population mean $\mu_2$ and population standard deviation $\sigma_2$,
+   then, for a sample of female cat weight of size $n_1$ and sample mean $\bar{y}_1$, and for a sample of male cat weight of size $n_2$ and sample mean $\bar{y}_2$, there is $(1 -\alpha)$ probability that the confidence interval $\left(
+\bar{y}_1-\bar{y}_2 - t_{d, \frac{\alpha}{2}} \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
+,
+\bar{y}_1-\bar{y}_2 + t_{d, \frac{\alpha}{2}} \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
+\right)$ covers the difference $\mu_1 - \mu_2$.
+    
+
+  d. Look at
+$$
+t_{d, \frac{\alpha}{2}} \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
+$$
+  
+
+- Q2
+  
+  a.
+  Let $\mu_A$ be thet average time to completely treat an infection of the first antibiotic. Let $\mu_B$ be that of the second antibiotic.
+  $$
+  \begin{aligned}
+  H_0: & \mu_A \geq \mu_B \\
+  H_A: & \mu_A < \mu_B.
+  \end{aligned}
+  $$
+  The question is kinds of not bad in wording tbh. It doesn't mention whether the A or B are the antibiotic we are actually interested in looking at. The above solution is assuming A is the one in interest. I think it is okay to consider the second one (e.g. the second one could mean the newer antibiotic) be in interest and states
+  $$
+  \begin{aligned}
+  H_0: & \mu_B \geq \mu_A \\
+  H_A: & \mu_B < \mu_A.
+  \end{aligned}
+  $$
+  However, the bottom line is that we should have "$<$" at the alternative hypothesis $H_A$, because it is a discovery to find out that the new antibiotic is better than the old one.
+  
+  
+  b. Type I Error: reject the null when the null is true. How would you rephrase this technical sentence into plain words in question situation?
+  
+  c. Type II Error: fail to reject the null when the null is false. How would you rephrase this technical sentence into plain words in question situation?
+  
+  d. In reality what the value $\alpha$ we should use in a problem depends on the disciplines (and your boss).
+  
+  
+- Q3
+  
+  a. Define the variable!!
+    Let $\mu_R$ and $\mu_L$ be ...
+    $$
+    H_0: \mu_R = \mu_L
+    $$
+  
+  b.
+    $$
+    H_0: \mu_R \neq \mu_L
+    $$
+  
+  c. Formula
+  $$
+  t = \frac{(\bar{y}_1 - \bar{y}_2) - 0}{\sqrt{\frac{s_1^2}{n_2} + \frac{s_2^2}{n_2}}}
+  $$
+  d. Use the t table. Don't forget converting the single tail area to two-sided tail area.
+  
+  e.
+    - The probability of seeing see our sample data (or more extreme)were equal is less than 0.001 when null hypothesis is true.
+    - The probability of seeing our sample data (or more extreme) if in reality the true average tail lengths for redbacked and ledbacked salamanders were equal is less than 0.001.
+  
+  f. What is the $\alpha$? What is the p-value?
+  
+  g. 
+  
+  
+  h. 
+  $$
+  \left( \bar{y}_1 - \bar{y}_2 \right) \pm t_{df, \frac{\alpha}{2}} \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
+  $$
+  
+  i.
+  
+  
