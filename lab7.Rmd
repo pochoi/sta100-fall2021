@@ -1,0 +1,193 @@
+---
+title: "STA100 Lab7"
+author: "Chi Po Choi"
+date: "11/11/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Exercise in `Discussion-07.pdf`
+
+Get the `Discussion-07.pdf` prepared by Maxime in [STA100B Piazza Resources ](https://piazza.com/ucdavis/fall2021/sta100b/resources) . 
+
+# Hints
+
+#### Discussion-07
+
+- Q2 (a-b)
+
+  | Brand |   A  |   B  |  C  |
+  |:-----:|:----:|:----:|:---:|
+  |   $\bar{y}_i$   | 10.5 | 10.6 | 8.2 |
+  |   $s_i$   |  2.1 |  2.2 | 4.8 |
+  |   $n_i$   |  25  |  25  |  25 |
+
+
+  $$
+  \begin{aligned}
+  H_0:& \mu_A = \mu_B = \mu_C \\
+  H_A:& \text{Not all $\mu_A, \mu_B, \mu_C$ are equal.}
+  \end{aligned}
+  $$
+
+  The F test statistics
+  $$
+  \begin{aligned}
+  \bar{\bar{y}}
+  &=
+  \frac{
+  25 \times 10.5 + 25 \times 10.6 + 25 \times 8.2
+  }{
+  25+25+25
+  }
+  =
+  9.7667
+  \\
+  MS(\text{Between})
+  &=
+  \frac{
+    SS(\text{Between})
+  }{
+    \text{d.f.}(\text{Between})
+  }
+  =
+  \frac{
+    25 \times (10.5 - 9.7667)^2
+  + 25 \times (10.6 - 9.7667)^2
+  + 25 \times (8.2 - 9.7667)^2
+  }{
+    3 - 1
+  }
+  =
+  46.0833
+  \\
+  MS(\text{Within})
+  &=
+  \frac{
+    SS(\text{Within})
+  }{
+    \text{d.f.}(\text{Within})
+  }
+  = 10.6159 \quad \text{(given in this question)}
+  \\
+  F
+  &=
+  \frac{MS(\text{Between})}{MS(\text{Within})}
+  =
+  \frac{46.0833}{10.6159}
+  =
+  4.3410
+  \end{aligned}
+  $$
+
+  Look at the F distribution table:
+  
+  - Numerator df $= 3 - 1 = 2$
+  - Denom. df $= 75 - 3 = 72$
+  - F $\sim (4.18, 4.98)$
+  - p-value $\sim (0.01, 0.02)$
+
+- Q2 (c)
+  
+  $\alpha = 0.05$, while p-value is between $0.01$ and $0.02$.
+  
+  p-value is smaller than $\alpha$, therefore $H_0$ null hypothesis is rejected.
+
+- Q2 (d)
+  
+  The ANOVA analysis here assumes equal variance across all brand (though they could have difference population mean).
+  The sample standard deviation of Brand C is a much higher than that of A and B. It is suspicious that Brand C could have differerent variance than A and B.
+
+
+#### Homework 5
+
+- R Homework I
+
+Lets load the DRP data and plot it. Note that we use the function `factor` to set up the categorical variable `Treatment` in the way that "Treated" is at front and "Control" is at back.
+```{r}
+data_drp <- read.csv("DRP.csv")
+data_drp$Treatment = factor(data_drp$Treatment, levels = c("Treated", "Control")) #important line!
+boxplot(Response ~ Treatment, data = data_drp)
+```
+
+
+Lets compute the two-sided confidence interval for the difference in population means. The difference is
+$$
+\mu_\text{Treatment} - \mu_\text{Control}
+$$
+We use the function `t.test` to compute the two-sided confidence interval:
+```{r}
+t.test(Response ~ Treatment,
+       data = data_drp,
+       conf.level = 0.95)
+```
+
+From the output of `t.test`, we see that
+the 95 percent confidence interval of the difference in average DRP score between  "Treated" and "Control" is $(1.23302, 18.67588)$.
+
+
+We use the function `t.test` again, but with the option `alternative = "greater"` for the hypothesis
+$$
+\begin{aligned}
+H_0:& \quad \mu_\text{Treatment} - \mu_\text{Control} \leq 0 \\
+H_A:& \quad \mu_\text{Treatment} - \mu_\text{Control} > 0
+\end{aligned}
+$$
+```{r}
+t.test(Response ~ Treatment,
+       data = data_drp,
+       alternative = "greater")
+```
+We can see the test statistics and p-value for this hypothesis.
+
+
+- R Homework II
+
+Lets load the IQ data and plot it.
+```{r}
+data_iq <- read.csv("IQ.csv")
+data_iq$group <- factor(data_iq$group, levels = c("A", "B", "C"))
+
+boxplot(iq ~ group, data = data_iq)
+```
+
+
+We may consider the hypothesis 
+$$
+\begin{aligned}
+H_0:& \quad \mu_A = \mu_B = \mu_C \\
+H_A:& \quad \text{not all equal}.
+\end{aligned}
+$$
+Let use the `lm` and `anova` functions to find out the F test corresponding to this hypothesis. 
+```{r}
+model_iq <- lm(iq ~ group, data = data_iq)
+anova(model_iq)
+```
+
+The F test statistics is 20.016 with d.f. being 2.
+
+
+We can plot the Normal Probability Plot for IQ scores, with all group together.
+```{r}
+qqnorm(data_iq$iq, main = "Normal Probability Plot for IQ scores")
+qqline(data_iq$iq)
+```
+
+We can plot the Normal Probability Plot for IQ scores with each group individually.
+```{r}
+index_A = data_iq$group == "A"
+qqnorm(data_iq$iq[index_A], main = "Normal Probability Plot for IQ scores in group A")
+qqline(data_iq$iq[index_A])
+
+index_B = data_iq$group == "B"
+qqnorm(data_iq$iq[index_B], main = "Normal Probability Plot for IQ scores in group B")
+qqline(data_iq$iq[index_B])
+
+index_C = data_iq$group == "C"
+qqnorm(data_iq$iq[index_C], main = "Normal Probability Plot for IQ scores in group C")
+qqline(data_iq$iq[index_C])
+```
